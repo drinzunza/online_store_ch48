@@ -1,0 +1,9 @@
+
+.navbar {
+    background-color: var(--primary);
+}
+
+.navbar label {
+    font-size: 18px;
+    font-weight: bold;
+}

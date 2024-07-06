@@ -1,0 +1,44 @@
+.product {
+    border: 1px solid var(--border);
+    border-radius: 4px;    
+    width: 230px;
+    height: 320px;
+    display:inline-block;
+    margin: 10px;
+    background-color: white;
+    vertical-align: top;
+}
+
+.product:hover {
+    border-color: var(--primary);
+    box-shadow: -1px 1px 4px 1px #c0c0c0;
+}
+
+.product img {
+    width: 228px;
+    height: 200px;
+    border-radius: 4px;
+}
+
+.product h5 {
+    margin: 0 0 5px 0;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.product .total {
+    font-size: 20px;
+    color: tomato;
+    margin-right: 12px;    
+}
+
+.product .controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.product .controls .qt-picker {
+    margin-right: 10px;
+}
+

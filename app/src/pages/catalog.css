@@ -1,0 +1,14 @@
+
+.catalog {
+    background-color:var(--background);
+}
+
+.catalog h1 {
+    color: #636363;
+    text-align: center;
+    margin: 0 0 12px 0;
+}
+
+.catalog .filters button {
+    margin-right: 5px;
+}
