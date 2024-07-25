@@ -1,0 +1,43 @@
+.admin {
+}
+
+.admin h1 {
+  text-align: center;
+  color: var(--primary);
+}
+
+.admin .parent {
+  display: flex;
+}
+
+.admin .sec-prods {
+  flex: 1;
+}
+
+.admin .sec-coupons {
+  flex: 1;
+}
+
+.admin .form {
+  background-color: white;
+  border: 1px solid #817f7f;
+  border-radius: 4px;
+  margin: 5px;
+  padding: 20px;
+  text-align: left;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.admin h3 {
+  color: var(--secondary);
+}
+
+.admin .form div {
+  margin-bottom: 12px;
+}
+
+.admin .form i {
+  margin-right: 5px;
+}

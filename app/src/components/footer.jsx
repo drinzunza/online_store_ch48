@@ -1,12 +1,7 @@
-import "./footer.css";
-
+import './footer.css';
 
 function Footer() {
-    return (
-        <div className='footer'>
-            I'm the footer
-        </div>
-    )
+  return <div className="footer">Sergio Inzunza @ SDGKU</div>;
 }
 
 export default Footer;

@@ -1,9 +1,9 @@
 :root {
-  --background: #eaeeef;
+  --background: #f0f3f5;
   --border: #999;
   --primary: #086177;
+  --secondary: #709775;
 }
-
 
 .App {
   text-align: center;
@@ -42,4 +42,10 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.page {
+  min-height: calc(100vh - 105px);
+  background-color: var(--background);
+  background-image: linear-gradient(to top, #b9ccd9, #c7d6e0, #d4dfe7, #e2e9ee, #f0f3f5);
 }

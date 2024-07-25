@@ -1,0 +1,20 @@
+.home {
+  background-color: #d8dbd4;
+  position: relative;
+}
+
+.home h1 {
+  color: darkcyan;
+  text-align: center;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.home .img-1 {
+  width: 100%;
+}
+
+.home .info {
+  position: absolute;
+  top: 55%;
+  left: 58%;
+}

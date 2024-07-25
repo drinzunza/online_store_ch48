@@ -1,28 +1,63 @@
-import "./product.css";
+import { useContext, useState } from 'react';
+import './product.css';
 import QuantityPicker from './quantityPicker';
+import DataContext from '../state/dataContext';
 
 function Product(props) {
+  const [quantity, setQuantity] = useState(1);
 
-    function add() {
-        console.log("adding " + props.info.title);
-    }    
+  let addProductToCart = useContext(DataContext).addProductToCart;
 
-    return (
-        <div className="product">
+  function add() {
+    // obj that contains all info + quantity
+    let x = {
+      ...props.info,
+      quantity: quantity,
+    };
 
-            <img src={"/images/" + props.info.image} alt="" />
+    addProductToCart(x); // call context fn
+  }
 
-            <h5>{props.info.title}</h5>
+  function handleQuantityChange(val) {
+    setQuantity(val);
+  }
 
-            <label className='total'>${props.info.price.toFixed(2)}</label>
-            <label>${props.info.price.toFixed(2)}</label>
+  function getTotal() {
+    let total = props.info.price * quantity;
+    return total.toFixed(2);
+  }
 
-            <div className="controls">
-                <QuantityPicker />
-                <button onClick={add} className="btn btn-sm btn-primary">Add</button>
-            </div>
-        </div>
-    );
+  return (
+    <div className="product">
+      <img src={'/images/' + props.info.image} alt="" />
+
+      <h5>{props.info.title}</h5>
+
+      <label className="total">${getTotal()}</label>
+      <label>${props.info.price.toFixed(2)}</label>
+
+      <div className="controls">
+        <QuantityPicker onChange={handleQuantityChange} />
+
+        <button onClick={add} className="btn btn-sm btn-primary">
+          <i class="fa-solid fa-cart-plus"></i>
+        </button>
+      </div>
+    </div>
+  );
 }
 
 export default Product;
+
+/**
+ *
+ * create and Admin page
+ *
+ * - create the component (and css)
+ * - put a heading on the component
+ *
+ * - create a route for in on app.js (/admin)
+ *
+ * - add a menu option on the navbar
+ *
+ */
