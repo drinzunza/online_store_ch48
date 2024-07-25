@@ -1,0 +1,28 @@
+explain CORS error, 
+install flask-cors on backend:
+python3 -m pip install Flask-Cors
+
+add the lines to the top of server.py
+
+from flask_cors import CORS
+
+api = Flask("store") # this line is there already
+CORS(api)  # warning: disable CORS policy
+
+
+
+
+on the front end:
+npm install -s axios
+
+explain async/await
+
+update dataservice.js to call the server:
+import axios from 'axios';
+
+let response = await axios.get('http://127.0.0.1:5000/api/products');
+return response.data;
+
+
+update catalog to use async/await when calling the dataservice
+
